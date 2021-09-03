@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>430</x>
+      <y>20</y>
+      <w>400</w>
+      <h>230</h>
+    </coordinates>
+    <panel_attributes>kr.or.shi.polymorphism01::Player
+--
+-name: String
+-age: int
+-backNumber: int
+-speed: int
+--
++Player(String name, int age, int backNumber, int speed): ctor
++getName(): String
++getAge(): int
++getBackNumber(): int
++getSpeed(): int
++info(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>420</y>
+      <w>490</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>kr.or.shi.polymorphism01::Defender
+--
+-sliding = 0: int
+--
++Defender(String name, int age, int backNumber, int speed, int sliding): ctor
++getSliding(): int
++info(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>580</x>
+      <y>280</y>
+      <w>490</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>kr.or.shi.polymorphism01::MidFielder
+--
+-assist = 0: int
+--
++MidFielder(String name, int age, int backNumber, int speed, int assist): ctor
++getAssist(): int
++info(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>280</y>
+      <w>460</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>kr.or.shi.polymorphism01::Striker
+--
+-shoot: int
+--
++Striker(String name, int age, int backNumber, int speed, int shoot): ctor
++getShoot(): int
++info(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>830</x>
+      <y>220</y>
+      <w>200</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>290</x>
+      <y>210</y>
+      <w>150</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>130.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>530</x>
+      <y>230</y>
+      <w>30</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;190.0</additional_attributes>
+  </element>
+</diagram>
