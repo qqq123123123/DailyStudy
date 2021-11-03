@@ -30,4 +30,24 @@ public class BoardDeleteProService {
 		return deleteSuccess;
 	}
 
+	public boolean deleteVO(int num, String passwd) {
+		boolean deleteSuccess = false;
+	    Connection con = getConnection();
+	    BoardDAO boardDAO = BoardDAO.getInstance();
+	    boardDAO.setConnection(con);
+	    
+	    int deleteCount = boardDAO.deleteArticle(num, passwd);
+	    if(deleteCount > 0) {
+	    	commit(con);
+	    	deleteSuccess = true;
+	    }
+	    else {
+	    	rollback(con);
+	    }
+	    System.out.println(deleteSuccess);
+	    
+	    
+		return deleteSuccess;
+	}
+
 }

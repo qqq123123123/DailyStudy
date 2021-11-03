@@ -14,13 +14,13 @@ public class DeleteFormProAction implements Action {
 	@Override
 	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		ActionForward forward = null;
-		BoardVO boardVO = new BoardVO();
-		boardVO.setNum(Integer.parseInt(request.getParameter("num")));
-		boardVO.setPasswd(request.getParameter("passwd"));
+//		BoardVO boardVO = new BoardVO();
+		int num = Integer.parseInt(request.getParameter("num"));
+		String passwd = (request.getParameter("passwd"));
 		
 		BoardDeleteProService boardDeleteProService = new BoardDeleteProService();
 		
-		boolean deleteSuccess = boardDeleteProService.deleteVO(boardVO);
+		boolean deleteSuccess = boardDeleteProService.deleteVO(num, passwd);
 		
 		if(deleteSuccess)
 		{

@@ -335,6 +335,43 @@ public int deleteArticle(BoardVO boardVO) {
 	return deleteCount;
 }
 
+public int deleteArticle(int num, String passwd) {
+	
+	int deleteCount = 0;
+    PreparedStatement pstmt = null;
+    ResultSet rs = null;
+    String sql = "";
+    String dbPasswd = null;	// db에 있는 패스워드
+    try {
+    	pstmt = con.prepareStatement("SELECT passwd FROM BOARD WHERE num = ?");
+        pstmt.setInt(1, num);
+        rs = pstmt.executeQuery();
+        
+        if(rs.next())
+        {
+        	dbPasswd = rs.getString("passwd");
+        	if(dbPasswd.equals(passwd))
+        	{
+        		sql = "DELETE FROM BOARD WHERE num =" + num;
+        		
+                deleteCount = pstmt.executeUpdate(sql);
+        	}
+        }
+		
+	} catch (Exception e) {
+		e.printStackTrace();
+	}
+    finally
+    {
+    	close(rs);
+    	close(pstmt);
+    }
+    
+    
+    
+	return deleteCount;
+}
+
 
 }
 

@@ -8,6 +8,7 @@
 </head>
 <body>
 <a href="boardWriteForm.bo">게시판 글쓰기</a><br>
-<a href="boardList.bo">게시판 글목록보기</a>
+<a href="boardList.bo">게시판 글목록보기</a> <!--  게시판 목록보기 -->
+<!-- Test Comment -->
 </body>
 </html>
